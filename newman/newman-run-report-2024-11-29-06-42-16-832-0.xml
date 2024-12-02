@@ -21,3 +21,38 @@
     <testcase name="Status code is 404" time="0.342" classname="5GetDEletedUser"/>
   </testsuite>
 </testsuites>
+
+newman run G:\Sharan_Data\APIData\SampleJenkinsTest.postman_collection.json -e G:\Sharan_Data\APIData\SampleJenkin.postman_environment.json
+newman run $collectionName -e $envName -n iteration -r cli,htmlextra,json
+newman run G:\Sharan_Data\APIData\SampleJenkinsTest.postman_collection.json -e G:\Sharan_Data\APIData\SampleJenkin.postman_environment.json -n 3 -r cli,htmlextra,json
+
+
+newman run ./SampleJenkinsTest.postman_collection.json -e ./SampleJenkin.postman_environment.json -n 1 -r cli,htmlextra,json
+
+
++358 45 73962783
+
+------------git
+newman run ./SampleJenkinsTest.postman_collection.json -e ./SampleJenkin.postman_environment.json -n 1 -r cli,htmlextra,json 
+
+newman run ./GitTest.postman_collection.json -e ./GitEnv.postman_environment.json -n 3 -r cli,htmlextra,json 
+
+newman run ./WorkFlow_Test.postman_collection.json -e ./WokFlowpostman_environment -n 3 -r cli,htmlextra,json 
+
+
+MINUTES Minutes in one hour (0-59)
+HOURS Hours in one day (0-23)
+DAYMONTH Day in a month (1-31)
+MONTH Month in a year (1-12)
+DAYWEEK Day of the week (0-7) where 0 and 7 are sunday
+If you want to schedule your build every 5 minutes, this will do the job : */5 * * * *
+
+If you want to schedule your build every day at 8h00, this will do the job : 0 8 * * *
+
+https://more.suse.com/End_Distro_Life_Challenges_WP.html?utm_campaign=0006637_Display_Google_CentOS&utm_medium=display&utm_source=google&utm_content=responsive&qgad=720672729969&gad_source=5&gclid=EAIaIQobChMItYa1_6SJigMVU5ysAh17fyS9EAEYASAAEgJYFfD_BwE
+
+
+
+
+
+
