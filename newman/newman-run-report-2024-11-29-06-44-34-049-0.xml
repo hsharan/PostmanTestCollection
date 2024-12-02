@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="WorkFlow_Test" tests="5" time="2.655">
+  <testsuite name="1.POST_CreateUser" id="b5cd338b-33c7-47e2-8d8a-84e56d933c33" timestamp="2024-11-29T06:44:30.710Z" tests="2" failures="0" errors="0" time="1.010">
+    <testcase name="Response time is less than 5000ms" time="1.010" classname="1PostCreateUser"/>
+    <testcase name="Status code is 201" time="1.010" classname="1PostCreateUser"/>
+  </testsuite>
+  <testsuite name="2.GET_CreatedUser" id="c197efa9-7006-4a9a-b58d-565cd813d535" timestamp="2024-11-29T06:44:30.710Z" tests="2" failures="0" errors="0" time="0.379">
+    <testcase name="Response time is less than 5000ms" time="0.379" classname="2GetCreatedUser"/>
+    <testcase name="Status code is 200" time="0.379" classname="2GetCreatedUser"/>
+  </testsuite>
+  <testsuite name="3.PATCH_UpdateUSer" id="9dac2b3e-403b-4bbf-a1b4-17de1322e0aa" timestamp="2024-11-29T06:44:30.710Z" tests="2" failures="0" errors="0" time="0.493">
+    <testcase name="Response time is less than 5000ms" time="0.493" classname="3PatchUpdateUSer"/>
+    <testcase name="Status code is 200" time="0.493" classname="3PatchUpdateUSer"/>
+  </testsuite>
+  <testsuite name="4.DELETE-User" id="f2a540dd-c6d2-4934-9c86-d7f2200c7450" timestamp="2024-11-29T06:44:30.710Z" tests="2" failures="0" errors="0" time="0.417">
+    <testcase name="Response time is less than 5000ms" time="0.417" classname="4DeleteUser"/>
+    <testcase name="Status code is 204" time="0.417" classname="4DeleteUser"/>
+  </testsuite>
+  <testsuite name="5.GET_DEletedUser" id="bac66381-ffe9-4340-8172-e72cd31190f5" timestamp="2024-11-29T06:44:30.710Z" tests="2" failures="0" errors="0" time="0.356">
+    <testcase name="Response time is less than 5000ms" time="0.356" classname="5GetDEletedUser"/>
+    <testcase name="Status code is 404" time="0.356" classname="5GetDEletedUser"/>
+  </testsuite>
+</testsuites>

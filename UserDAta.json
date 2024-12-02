@@ -1,0 +1,26 @@
+[
+{
+     
+        "name": "Sharan1",
+        "gender": "male",
+        "status": "inactive"
+},
+{
+     
+        "name": "Sharan2",
+        "gender": "male",
+        "status": "active"
+},
+{
+     
+        "name": "Sharan3",
+        "gender": "male",
+        "status": "inactive"
+},
+{
+     
+        "name": "Sharan4",
+        "gender": "male",
+        "status": "active"
+}
+]

@@ -1,0 +1,21 @@
+{
+	"id": "e064fd04-ba4a-428e-890d-95119faded33",
+	"values": [
+		{
+			"key": "tokenId",
+			"value": "Bearer 8cc2fb2d65333fab4f7a3aa752662dac66d862fb2afa9a5578155b94a3e9d32f",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "TestURL",
+			"value": "https://gorest.co.in",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2024-11-29T06:12:34.150Z",
+	"_postman_exported_using": "Postman/11.21.0"
+}

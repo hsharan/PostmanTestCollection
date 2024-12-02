@@ -1,0 +1,27 @@
+[
+    {
+        "name": "John Doe",
+        "age": 30
+    },
+    {
+        "name": "Doe",
+        "age": 32,
+        "isEmployed": "Yes"
+    },
+    {
+        "name": "Batra Doe",
+        "age": 33,
+        "city": "Bangalore"
+    },
+{
+    "firstname" : "eeSharan",
+    "lastname" : "eeHaagaaraagaai",
+    "totalprice" : 111,
+    "depositpaid" : true,
+    "bookingdates" : {
+        "checkin" : "2018-01-01",
+        "checkout" : "2019-01-01"
+    },
+    "additionalneeds" : "Breakfast"
+}
+]
