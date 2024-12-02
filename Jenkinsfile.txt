@@ -1,45 +1,63 @@
 pipeline {
     agent any
+    environment {
+        GIT_URL = 'https://github.com/hsharan/PostmanTestCollection'
+        REPORT_DIR = 'results'
+        REPORT_FILE = 'WF_Sharan_report.html'
+    }
     stages {
-
         stage('Build') {
             steps {
-                echo("build the war")
+                echo("Building the .war file")
             }
         }
 
-        stage("Deploy to QA"){
-            steps{
-                echo("deploy to qa")
+        stage("Deploy to QA") {
+            steps {
+                echo("Deploying to QA environment")
             }
         }
 
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/hsharan/PostmanTestCollection'
-            }
-        }
-        stage('Run api test cases') {
-            steps {
-                bat 'newman run ./WorkFlow_Test.postman_collection.json -e ./WokFlowpostman_environment -n 1 -r htmlextra,cli --reporter-htmlextra-export ./results/WF_Sharan_report.html'
-            }
-        }
-        stage('Publish HTML Extra Report'){
-            steps{
-                     publishHTML([allowMissing: false,
-                                  alwaysLinkToLastBuild: false, 
-                                  keepAll: true, 
-                                  reportDir: 'results', 
-                                  reportFiles: 'WF_Sharan_report.html', 
-                                  reportName: 'HTML Extra API Report', 
-                                  reportTitles: ''])
+                git url: https://github.com/hsharan/PostmanTestCollection
             }
         }
 
-        stage("Deploy to PROD"){
-            steps{
-                echo("deploy to PROD")
+        stage('Run API Test Cases') {
+            steps {
+                bat '''
+                   newman run ./WorkFlow_Test.postman_collection.json \
+                   -e ./WokFlowpostman_environment \
+                   -n 1 -r htmlextra,cli \
+                   --reporter-htmlextra-export ${REPORT_DIR}/${REPORT_FILE}
+                '''
             }
+        }
+
+        stage('Publish HTML Extra Report') {
+            steps {
+                publishHTML([allowMissing: false,
+                             alwaysLinkToLastBuild: false, 
+                             keepAll: true, 
+                             reportDir: REPORT_DIR, 
+                             reportFiles: REPORT_FILE, 
+                             reportName: 'HTML Extra API Report', 
+                             reportTitles: 'API Test Report'])
+            }
+        }
+
+        stage("Deploy to PROD") {
+            steps {
+                echo("Deploying to PROD environment")
+            }
+        }
+    }
+    post {
+        failure {
+            mail to: 'sshagargi@gmail.com',
+                 subject: "Pipeline Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: "Check the Jenkins logs for details: ${env.BUILD_URL}"
         }
     }
 }
