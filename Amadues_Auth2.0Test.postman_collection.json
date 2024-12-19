@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "9237a8c0-401d-4287-88fc-b0d714802ce5",
+		"name": "Amadues_Auth2.0Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28319607"
+	},
+	"item": [
+		{
+			"name": "1-CreateAccessToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "EKEc5V6xcu0UpAIVv9egb1YGCDgo5iIS",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "G0ov2wcXzRHUrPAR",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test.api.amadeus.com/v1/security/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"test",
+						"api",
+						"amadeus",
+						"com"
+					],
+					"path": [
+						"v1",
+						"security",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-FlightDetails",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer P4kreRTrjmSBHX8VxAVJQAVQTW7I"
+					}
+				],
+				"url": {
+					"raw": "https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=PAR&maxPrice=200",
+					"protocol": "https",
+					"host": [
+						"test",
+						"api",
+						"amadeus",
+						"com"
+					],
+					"path": [
+						"v1",
+						"shopping",
+						"flight-destinations"
+					],
+					"query": [
+						{
+							"key": "origin",
+							"value": "PAR"
+						},
+						{
+							"key": "maxPrice",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
